@@ -1,6 +1,6 @@
 # Modul 3 (Integrasi MongoDB dan Express)
 
-Nama: Irfan Hanif Habibi
+Nama: Irfan Hanif Habibi <br>
 NIM: 215150701111025
 
 ## Percobaan instalasi NodeJS
@@ -12,13 +12,13 @@ Menjalankan command node -v untuk memeriksa apakah NodeJS sudah terinstall
 ## Inisiasi project Express dan pemasangan package
 
 Pembuatan folder dengan nama express-mongodb.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_2_1.PNG)
+> ![](./Dokumentasi/pi_2_1.PNG)
 
 Men-generate file package.json dengan menggunakan command `npm init -y`.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_2_2.PNG)
+> ![](./Dokumentasi/pi_2_2.PNG)
 
 Lakukan instalasi express, mongoose, dan dotenv dengan menggunakan command `npm i express mongoose dotenv`.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_2_3.PNG)
+> ![](./Dokumentasi/pi_2_3.PNG)
 
 ## Koneksi Express ke MongoDB
 
@@ -43,17 +43,17 @@ app.listen(PORT, () => {
 	console.log(`Running on port ${PORT}`);
 })
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_1_1.PNG)
+> ![](./Dokumentasi/pi_3_1_1.PNG)
 
 Menjalankan aplikasi node.js dengan command `node index.js`.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_1_2.PNG)
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_1_3.PNG)
+> ![](./Dokumentasi/pi_3_1_2.PNG)
+> ![](./Dokumentasi/pi_3_1_3.PNG)
 
 Pembuatan file `.env` dengan memasukkan kode berisi *variable environment* berikut:
 ```
 PORT=5000
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_2_1.PNG)
+> ![](./Dokumentasi/pi_3_2_1.PNG)
 
 Mengubah kode pada listening port menjadi sesuai di bawah dan coba jalankan aplikasi node.js kembali.
 ```
@@ -63,15 +63,15 @@ app.listen(PORT, () => {
 	console.log(`Running on port ${PORT}`);
 })
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_2_2.PNG)
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_2_3.PNG)
+> ![](./Dokumentasi/pi_3_2_2.PNG)
+> ![](./Dokumentasi/pi_3_2_3.PNG)
 *Port yang digunakan adalah merupakan variable environment yang berada di file `.env` *
 
 Copy connection string yang terdapat pada compas atau atlas dan paste kan pada `.env` seperti berikut:
 ```
 MONGO_URI="mongodb://127.0.0.1:27017"
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_3.PNG)
+> ![](./Dokumentasi/pi_3_3.PNG)
 
 Tambahkan baris kode berikut pada file index.js:
 ```
@@ -92,18 +92,18 @@ db.once("connected", () => {
 
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_4_1.PNG)
+> ![](./Dokumentasi/pi_3_4_1.PNG)
 
 Setelah itu coba jalankan aplikasi kembali.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_3_4_2.PNG)
+> ![](./Dokumentasi/pi_3_4_2.PNG)
 
 ## Pembuatan routing
 
 Pembuatan direktori `routes` di tingkat yang sama dengan index.js.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_4_1.PNG)
+> ![](./Dokumentasi/pi_4_1.PNG)
 
 Membuat file `book.route.js` di dalam direktori `routes`.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_4_2.PNG)
+> ![](./Dokumentasi/pi_4_2.PNG)
 
 Penambahan baris kode berikut untuk fungsi `getAllBooks`:
 ```
@@ -117,7 +117,7 @@ router.get("/", function getAllBooks(req, res) {
 
 module.exports = router;
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_4_3.PNG)
+> ![](./Dokumentasi/pi_4_3.PNG)
 
 Penambahan baris kode berikut untuk fungsi `getOneBook`, `createBook`, `updateBook`, dan `deleteBook`:
 ```
@@ -157,7 +157,7 @@ router.delete("/:id", function deleteBook(req, res) {
 
 module.exports = router;
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_4_4.PNG)
+> ![](./Dokumentasi/pi_4_4.PNG)
 
 Penambahan baris kode berikut untuk import `book.route.js` pada file `index.js`:
 ``` 
@@ -181,18 +181,18 @@ app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
 });
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_4_5.PNG)
+> ![](./Dokumentasi/pi_4_5.PNG)
 
 Pengujian kembali salah satu endpoint dengan Postman.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_4_5_2.PNG)
+> ![](./Dokumentasi/pi_4_5_2.PNG)
 
 ## Pembuatan controller
 
 Pembuatan direktori `controllers` di tingkat yang sama dengan index.js.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_1.PNG)
+> ![](./Dokumentasi/pi_5_1.PNG)
 
 Membuat file `book.controller.js` di dalam direktori `controllers`.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_2.PNG)
+> ![](./Dokumentasi/pi_5_2.PNG)
 
 Penambahan baris kode yang merupakan salinan dari `book.route.js` berikut untuk fungsi `getAllBooks`:
 ```
@@ -206,7 +206,7 @@ module.exports = {
   getAllBooks,
 };
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_3.PNG)
+> ![](./Dokumentasi/pi_5_3.PNG)
 
 Penambahan baris kode berikut yang merupakan salinan dari `book.route.js` untuk fungsi `getOneBook`, `createBook`, `updateBook`, dan `deleteBook`:
 ```
@@ -250,8 +250,8 @@ module.exports = {
   deleteBook, //
 };
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_4_1.PNG)
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_4_2.PNG)
+> ![](./Dokumentasi/pi_5_4_1.PNG)
+> ![](./Dokumentasi/pi_5_4_2.PNG)
 
 Penambahan baris kode berikut untuk import `book.controller.js` pada file `book.route.js`:
 ``` 
@@ -260,7 +260,7 @@ const book = require('../controllers/book.controller'); //
 ...
 module.exports = router;
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_5.PNG)
+> ![](./Dokumentasi/pi_5_5.PNG)
 
 Pengubahan baris kode berikut untuk import fungsi-fungsi dari `book.controller.js` pada file `book.route.js`:
 ``` 
@@ -275,18 +275,18 @@ router.delete("/:id", book.deleteBook);
 
 module.exports = router;
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_6.PNG)
+> ![](./Dokumentasi/pi_5_6.PNG)
 
 Pengujian kembali salah satu endpoint dengan Postman.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_5_7.PNG)
+> ![](./Dokumentasi/pi_5_7.PNG)
 
 ## Pembuatan model
 
 Pembuatan direktori `models` di tingkat yang sama dengan index.js.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_6_1.PNG)
+> ![](./Dokumentasi/pi_6_1.PNG)
 
 Membuat file `book.model.js` di dalam direktori `models`.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_6_2.PNG)
+> ![](./Dokumentasi/pi_6_2.PNG)
 
 Penambahan baris kode yang merupakan implementasi skema dalam model `book`:
 ```
@@ -314,19 +314,19 @@ const bookSchema = new mongoose.Schema({
 
 module.exports = mongoose.model("book", bookSchema);
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_6_3.PNG)
+> ![](./Dokumentasi/pi_6_3.PNG)
 
 ## Operasi CRUD
 
 Hapus semua data pada collection books.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_1.PNG)
+> ![](./Dokumentasi/pi_7_1.PNG)
 
 Penambahan kode untuk melakukan import `book.model.js` pada file `book.controller.js`:
 ```
 const Book = require('../models/book.model');
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_2.PNG)
+> ![](./Dokumentasi/pi_7_2.PNG)
 
 Pengubahan kode untuk melakukan perubahan fungsi `createBook` pada file `book.controller.js`:
 ```
@@ -359,7 +359,7 @@ async function createBook(req, res) {
 
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_3.PNG)
+> ![](./Dokumentasi/pi_7_3.PNG)
 
 Pembuatan dua buah buku dengan data di bawah ini dengan Postman.
 ```
@@ -372,7 +372,7 @@ Pembuatan dua buah buku dengan data di bawah ini dengan Postman.
 "publisher": "Pastel Books"
 }
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_4_1.PNG)
+> ![](./Dokumentasi/pi_7_4_1.PNG)
 
 ```
 {
@@ -384,7 +384,7 @@ Pembuatan dua buah buku dengan data di bawah ini dengan Postman.
 "publisher": "Pastel Books"
 }
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_4_2.PNG)
+> ![](./Dokumentasi/pi_7_4_2.PNG)
 
 Pengubahan kode untuk melakukan perubahan fungsi `getAllBooks` pada file `book.controller.js`
 ```
@@ -407,7 +407,7 @@ async function getAllBooks(req, res) {
 
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_5.PNG)
+> ![](./Dokumentasi/pi_7_5.PNG)
 
 Pengubahan kode untuk melakukan perubahan fungsi `getOneBook` pada file `book.controller.js`
 ```
@@ -432,13 +432,13 @@ async function getOneBook(req, res) {
   
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_6.PNG)
+> ![](./Dokumentasi/pi_7_6.PNG)
 
 Menampilkan semua buku dengan Postman.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_7.PNG)
+> ![](./Dokumentasi/pi_7_7.PNG)
 
 Menampilkan buku Dilan 1990 dengan Postman.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_8.PNG)
+> ![](./Dokumentasi/pi_7_8.PNG)
 
 Pengubahan kode untuk melakukan perubahan fungsi `updateBook` pada file `book.controller.js`
 ```
@@ -464,10 +464,10 @@ async function updateBook(req, res) {
   
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_9.PNG)
+> ![](./Dokumentasi/pi_7_9.PNG)
 
 Mengubah buku Dilan 1991 menjadi "Hanif 1991" dengan Postman.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_10.PNG)
+> ![](./Dokumentasi/pi_7_10.PNG)
 
 Pengubahan kode untuk melakukan perubahan fungsi `deleteBook` pada file `book.controller.js`
 ```
@@ -493,7 +493,7 @@ async function deleteBook(req, res) {
   
 ...
 ```
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_11.PNG)
+> ![](./Dokumentasi/pi_7_11.PNG)
 
 Menghapus buku Dilan 1990 dengan Postman.
-> ![](C:\Users\Hanif\Pictures\Screenshots\pi_7_12.PNG)
+> ![](./Dokumentasi/pi_7_12.PNG)
