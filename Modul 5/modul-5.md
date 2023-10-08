@@ -12,7 +12,7 @@ $router->get('/user/{id}', function ($id) {
 });
 ```
 
-Penambahan dynamic route degan variabel lebih dari satu dapat dilakukan dengan kode berikut.
+Penambahan dynamic route dengan variabel lebih dari satu dapat dilakukan dengan kode berikut.
 ```
 $router->get('/post/{postId}/comments/{commentId}', function ($postId, $commentId) {
     return 'Post ID = ' . $postId . ' Comments ID = ' . $commentId;
@@ -92,7 +92,7 @@ class AgeMiddleware
 > ![](./Dokumentasi/pi_4_1.PNG)
 
 Setelah menambahkan filter pada `AgeMiddleware` , maka harus mendaftarkan
-`AgeMiddleware`pada aplikasi luman pada file `bootstrap/app.php` seperti pada kode berikut:
+`AgeMiddleware`pada aplikasi lumen pada file `bootstrap/app.php` seperti pada kode berikut:
 ```
 ...
 
