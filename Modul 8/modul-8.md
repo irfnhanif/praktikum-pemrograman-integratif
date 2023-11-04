@@ -38,7 +38,7 @@ class User extends Model
 
 ![](./Dokumentasi/pi-1-2.PNG)
 
-Membuat file `AuthController.php` dengan memiliki kode berikut:
+Membuat file `AuthController.php` dengan menambahkan kode berikut:
 
 ```
 <?php
